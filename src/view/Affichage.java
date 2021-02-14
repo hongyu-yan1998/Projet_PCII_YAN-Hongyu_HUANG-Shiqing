@@ -57,6 +57,8 @@ public class Affichage extends JPanel {
         g2.drawLine(0,HAUT/3,LARG,HORIZON);
         //dessine la piste
         paintLine(g2);
+        //dessine les arbres
+        paintTree(g);
         //change la couleur du background
         setFondColor(g2);
         //afficher le score du joueur
@@ -65,8 +67,6 @@ public class Affichage extends JPanel {
         g2.drawImage(etat.getImg(), etat.getPosition(), HAUT-100,WIDTH,HEIGHT, null);
         //dessine les nuages
         vueNuage.dessiner(g2);
-        //dessine les arbres
-        paintTree(g);
     }
 
     /**
